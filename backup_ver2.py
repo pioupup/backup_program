@@ -11,12 +11,15 @@ import os
 import time
 import zipfile
 
-source_list = ['/mnt/FORALL/PYTHON/', '/home/awe/git']	#list of target directories
+# list of target directories
+source_list = ['/mnt/FORALL/PYTHON/', '/home/awe/git']
 
-tatget_dir = '/mnt/FORALL/BACKUP/'	#directory for backup files
+tatget_dir = '/mnt/FORALL/BACKUP/'  # directory for backup files
 
-today = tatget_dir + os.sep + time.strftime('%Y%m%d')	#string with today date for making directory
-now = time.strftime('%H%M%S')	#string with time for naming backup file 
+# string with today date for making directory
+today = tatget_dir + os.sep + time.strftime('%Y%m%d')
+# string with time for naming backup file
+now = time.strftime('%H%M%S')
 
 if not os.path.exists(today):	#if directory yet exist - make it
 	os.makedirs(today)
